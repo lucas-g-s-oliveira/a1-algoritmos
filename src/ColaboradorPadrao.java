@@ -1,4 +1,4 @@
 public class ColaboradorPadrao extends Colaborador {
-    
-    String tipo = "Proprio";       
+    {
+    tipo = "Proprio"; }      
     }
