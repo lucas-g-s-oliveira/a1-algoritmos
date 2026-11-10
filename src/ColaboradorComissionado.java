@@ -8,8 +8,6 @@ public class ColaboradorComissionado extends Colaborador {
         return comissao;
     }
     double calcularSalarioFinal() {
-        ColaboradorComissionado y = new ColaboradorComissionado();
-        comissao = y.calcularComissao();
         double salarioFinal = salarioBase + comissao;
         return salarioFinal;
     }
