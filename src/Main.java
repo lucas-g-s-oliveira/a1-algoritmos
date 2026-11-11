@@ -64,20 +64,54 @@ public class Main {
                 System.out.println("nenhum colaborador cadastrado na folha!!!");
             }
             else {
+              System.out.println("4 - Gerar Folha de Pagamento:");
+              
               int tamanhoLista = lista.size();
               int i2;
               double salarioFinal;
+              
               for (i2 = 0; i2 < tamanhoLista; i2++) {
                System.out.println("Matricula: "+lista.get(i2).matricula);
                System.out.println("Nome: "+lista.get(i2).nome);
                System.out.println("Tipo: "+lista.get(i2).tipo);
                System.out.println("Salario base: "+lista.get(i2).salarioBase); 
                salarioFinal = lista.get(i2).calcularSalarioFinal();
+               
                if (salarioFinal > 2000) {
                System.out.println("Comissão: "+ (salarioFinal-2000));
                }
+               System.out.println("\n________________________________");
+               System.out.println("\n");
+              }
               }
             }
+        
+        else if (resposta == 5){
+            if (i == 0){ 
+                System.out.println("nenhum colaborador cadastrado na folha!!!");
+            }
+            else {
+            System.out.println("5 - Resumo da folha");
+            int tamanhoLista = lista.size();
+              int i3;
+              double salarioFinal;
+              double salarioTotal = 0;
+              for (i3 = 0; i3 < tamanhoLista; i3++) {
+               salarioFinal = lista.get(i3).calcularSalarioFinal();
+               salarioTotal = (salarioTotal + salarioFinal);
+               }
+              double mediaSalario = salarioTotal / i;
+              System.out.println("O total de colaboradores é: "+i);
+              System.out.println("O total da folha é: "+salarioTotal);
+              if (i <= 1){
+                System.out.printf("A média salaria é: "+salarioTotal);
+                }
+              else {
+              System.out.printf("A média salaria é: "+mediaSalario);
+              }
+              }
+        sc.nextDouble(); sc.nextLine();
+        System.out.println("\n");
         }
         else if ( resposta != 0 ) {
         System.out.println("DIGITE UM COMANDO VÁLIDO");
